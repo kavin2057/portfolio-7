@@ -13,11 +13,11 @@ const Hero = () => {
   };
 
   return (
-    <section id="hero" className="min-h-screen relative flex items-center justify-center particles-bg">
+    <section id="hero" className="min-h-screen relative flex items-center justify-center">
       <div className="text-center z-10 max-w-4xl mx-auto px-6">
         <div className={`transition-all duration-1000 ${isVisible ? 'animate-fade-in-up' : 'opacity-0'}`}>
           <h1 className="text-5xl md:text-7xl font-bold mb-6">
-            <span className="neon-text">Kavin</span>
+            <span className="gradient-text">Kavin</span>
             <br />
             <span className="text-foreground">Shanmugavel</span>
           </h1>
@@ -33,16 +33,16 @@ const Hero = () => {
         </div>
 
         <div className={`flex flex-wrap justify-center gap-4 mb-12 transition-all duration-1000 ${isVisible ? 'animate-fade-in-up animate-delay-400' : 'opacity-0'}`}>
-          <span className="px-4 py-2 bg-card border neon-border rounded-lg font-code text-sm">
+          <span className="px-4 py-2 bg-card border border-primary/30 rounded-lg font-code text-sm">
             React.js
           </span>
-          <span className="px-4 py-2 bg-card border neon-border rounded-lg font-code text-sm">
+          <span className="px-4 py-2 bg-card border border-primary/30 rounded-lg font-code text-sm">
             Node.js
           </span>
-          <span className="px-4 py-2 bg-card border neon-border rounded-lg font-code text-sm">
+          <span className="px-4 py-2 bg-card border border-primary/30 rounded-lg font-code text-sm">
             Python
           </span>
-          <span className="px-4 py-2 bg-card border neon-border rounded-lg font-code text-sm">
+          <span className="px-4 py-2 bg-card border border-primary/30 rounded-lg font-code text-sm">
             Full-Stack
           </span>
         </div>
