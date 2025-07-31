@@ -16,7 +16,7 @@ const Hero = () => {
     <section id="hero" className="min-h-screen relative flex items-center justify-center">
       <div className="text-center z-10 max-w-4xl mx-auto px-6">
         <div className={`transition-all duration-1000 ${isVisible ? 'animate-fade-in-up' : 'opacity-0'}`}>
-          <h1 className="text-5xl md:text-7xl font-bold mb-6">
+          <h1 className="text-5xl md:text-7xl font-bold mb-12">
             <span className="text-white">Kavin</span>
             <br />
             <span className="text-white">Shanmugavel</span>
@@ -24,7 +24,7 @@ const Hero = () => {
         </div>
         
         <div className={`transition-all duration-1000 ${isVisible ? 'animate-fade-in-up animate-delay-200' : 'opacity-0'}`}>
-          <p className="text-xl md:text-2xl text-white/90 mb-4">
+          <p className="text-xl md:text-3xl text-white/90 mb-12">
             Software Engineer
           </p>
           <p className="text-lg text-white/70 max-w-2xl mx-auto mb-8">

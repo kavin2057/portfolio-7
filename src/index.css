@@ -8,13 +8,13 @@
   :root {
     /* Dark Portfolio Color Scheme */
     --background: 0 0% 0%;
-    --foreground: 210 40% 95%;
+    --foreground: 210 40% 98%;
 
     --card: 220 20% 12%;
-    --card-foreground: 210 40% 95%;
+    --card-foreground: 210 40% 98%;
 
     --popover: 220 20% 12%;
-    --popover-foreground: 210 40% 95%;
+    --popover-foreground: 210 40% 98%;
 
     --primary: 220 27% 8%;
     --primary-foreground: 210 40% 95%;
@@ -23,7 +23,7 @@
     --secondary-foreground: 210 40% 95%;
 
     --muted: 220 20% 15%;
-    --muted-foreground: 215 20% 65%;
+    --muted-foreground: 215 20% 85%;
 
     --accent: 220 20% 15%;
     --accent-foreground: 210 40% 95%;
@@ -56,13 +56,13 @@
 
   .dark {
     --background: 220 27% 8%;
-    --foreground: 210 40% 95%;
+    --foreground: 210 40% 98%;
 
     --card: 220 20% 12%;
-    --card-foreground: 210 40% 95%;
+    --card-foreground: 210 40% 98%;
 
     --popover: 220 20% 12%;
-    --popover-foreground: 210 40% 95%;
+    --popover-foreground: 210 40% 98%;
 
     --primary: 210 40% 95%;
     --primary-foreground: 220 27% 8%;
@@ -71,7 +71,7 @@
     --secondary-foreground: 210 40% 95%;
 
     --muted: 220 20% 15%;
-    --muted-foreground: 215 20% 65%;
+    --muted-foreground: 215 20% 85%;
 
     --accent: 220 20% 15%;
     --accent-foreground: 210 40% 95%;
@@ -134,10 +134,9 @@
 
   /* Minimal Moving Dots Background - Astronaut in Space */
   .dots-background {
-    background-image: radial-gradient(circle, rgba(255, 255, 255, 0.4) 0.5px, transparent 1px);
+    background-image: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0.5px, transparent 1px);
     background-size: 120px 120px;
     animation: slow-drift 60s linear infinite;
-    opacity: 0.3;
   }
 
   /* Gradient Backgrounds */

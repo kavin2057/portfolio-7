@@ -125,29 +125,6 @@ const Contact = () => {
                 ))}
               </div>
             </div>
-
-            {/* Social Links */}
-            <div className={`bg-black/40 backdrop-blur-sm border border-white/20 rounded-2xl p-8 hover:border-white/40 transition-all duration-1000 ${inView ? 'animate-scale-in animate-delay-300' : 'opacity-0'}`}>
-              <h4 className="text-xl font-semibold mb-4 text-white">Find Me Online</h4>
-              <div className="flex gap-4">
-                <a
-                  href="https://github.com/kavin"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="p-3 bg-black/40 backdrop-blur-sm border border-white/20 rounded-lg hover:bg-white hover:text-black transition-all duration-300 hover:scale-110 group"
-                >
-                  <Github className="w-6 h-6" />
-                </a>
-                <a
-                  href="https://linkedin.com/in/kavin"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="p-3 bg-black/40 backdrop-blur-sm border border-white/20 rounded-lg hover:bg-white hover:text-black transition-all duration-300 hover:scale-110 group"
-                >
-                  <Linkedin className="w-6 h-6" />
-                </a>
-              </div>
-            </div>
           </div>
 
           {/* Contact Form */}
@@ -220,12 +197,7 @@ const Contact = () => {
                 </Button>
               </form>
 
-              <div className="mt-6 p-4 bg-black/40 backdrop-blur-sm border border-white/20 rounded-lg">
-                <p className="text-sm text-white/70 text-center">
-                  💡 <strong>Quick tip:</strong> This form opens your email client with the message pre-filled.
-                  You can also email me directly at <span className="text-white font-code">kavin2057@gmail.com</span>
-                </p>
-              </div>
+
             </div>
           </div>
         </div>

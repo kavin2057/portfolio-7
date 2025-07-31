@@ -22,10 +22,14 @@ const Index = () => {
         <footer className="py-8 px-6 border-t border-white/20 bg-black/80 relative z-10">
           <div className="max-w-6xl mx-auto text-center">
             <p className="text-white/80">
-              © 2024 Kavin Shanmugavel. Built with React, TypeScript & Tailwind CSS.
+              © {new Date().getFullYear()} All rights reserved.
+              <br />
+
             </p>
             <p className="text-sm text-white/60 mt-2">
-              Designed with <span className="text-white">♥</span> for the modern web
+              Designed by{' '}
+              <a href="https://www.linkedin.com/in/kavin-shanmugavel/" target="_blank" rel="noopener noreferrer">Kavin</a>
+              
             </p>
           </div>
         </footer>

@@ -12,13 +12,13 @@ const Skills = () => {
       icon: Code,
       title: 'Skills',
       skills: [
-        'Python', 'JavaScript', 'TypeScript', 'HTML', 'CSS', 'SQL', 'C#',
-        'REST APIs', 'API Integration', 'ETL Pipelines', 'Data Modeling',
-        'Machine Learning', 'GenAI', 'LLMs', 'CNN', 'NLP', 'TensorFlow', 'PyTorch', 'AI Modeling',
-        'Node.js', 'Express', 'React.js', 'React Native',
-        'TailwindCSS', 'Bootstrap', 'Apache Spark', 'Kafka', 'Airflow',
+        'Python', 'JavaScript', 'TypeScript', 'HTML', 'CSS', 'SQL', 'C#','Apache Spark', 'Kafka', 'Airflow',
         'MySQL', 'Sequelize', 'MongoDB', 'PostgreSQL',
-        'AWS (S3, EC2, Lambda)', 'Docker'
+        'AWS (S3, EC2, Lambda)',
+        'REST APIs', 'API Integration', 'ETL Pipelines', 'Data Modeling',
+        'Machine Learning', 'GenAI', 'LLMs', 'CNN', 'NLP', 'TensorFlow', 
+        'Node.js', 'Express', 'React.js', 'React Native',
+        'TailwindCSS', 'Bootstrap', 'Docker'
       ]
     }
   ];
@@ -58,7 +58,7 @@ const Skills = () => {
                 {category.skills.map((skill, skillIndex) => (
                   <div 
                     key={skill}
-                     className={`px-4 py-3 bg-black/40 backdrop-blur-sm rounded-lg border border-white/20 hover:border-white hover:bg-white hover:text-black transition-all duration-300 text-center ${
+                     className={`px-4 py-3 bg-black/40 backdrop-blur-sm rounded-lg border border-white/20 hover:border-white hover:bg-black hover:text-white transition-all duration-300 text-center ${
                        inView ? 'animate-scale-in' : 'opacity-0'
                      }`}
                      style={{ animationDelay: `${200 + (skillIndex * 50)}ms` }}

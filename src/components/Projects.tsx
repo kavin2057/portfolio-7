@@ -15,7 +15,6 @@ const Projects = () => {
       features: ['Real-time pose tracking', 'Joint analysis', 'Feedback system', 'Rehabilitation support'],
       icon: Brain,
       gradient: 'from-neon-cyan to-neon-purple',
-      year: '2024'
     },
     {
       title: 'Deepfake Detection System',
@@ -24,7 +23,6 @@ const Projects = () => {
       features: ['Frame-wise analysis', 'Feature extraction', 'Automated reporting', 'High accuracy detection'],
       icon: Zap,
       gradient: 'from-neon-purple to-neon-pink',
-      year: '2024'
     },
     {
       title: 'VEcom - Multi-Purpose Platform',
@@ -33,7 +31,6 @@ const Projects = () => {
       features: ['Real-time functionality', 'E-commerce features', 'Book summaries', 'AI integration'],
       icon: Users,
       gradient: 'from-neon-pink to-neon-green',
-      year: '2023'
     },
     {
       title: 'Real-Time Stock Market API',
@@ -42,7 +39,6 @@ const Projects = () => {
       features: ['Real-time data streaming', 'Data processing', 'Cloud storage', 'Automated workflows'],
       icon: Calendar,
       gradient: 'from-neon-green to-neon-yellow',
-      year: '2023'
     },
     {
       title: 'Airline Data Ingestion Pipeline',
@@ -51,7 +47,6 @@ const Projects = () => {
       features: ['Data collection', 'Real-time processing', 'Analytics ready', 'Scalable architecture'],
       icon: ExternalLink,
       gradient: 'from-neon-yellow to-neon-cyan',
-      year: '2023'
     },
     {
       title: 'BookSky - Personal Book Management',
@@ -60,7 +55,6 @@ const Projects = () => {
       features: ['Book management', 'Advanced search', 'Book summaries', 'User-friendly interface'],
       icon: Github,
       gradient: 'from-neon-cyan to-neon-purple',
-      year: '2022'
     }
   ];
 
@@ -90,9 +84,6 @@ const Projects = () => {
                 <div className="p-3 rounded-xl bg-white">
                   <project.icon className="w-6 h-6 text-black" />
                 </div>
-                <span className="text-xs text-white/70 font-code px-2 py-1 bg-black/40 border border-white/20 rounded">
-                  {project.year}
-                </span>
               </div>
 
               {/* Title */}

@@ -1,4 +1,5 @@
 import { useInView } from 'react-intersection-observer';
+import { ExternalLink } from 'lucide-react';
 import { MapPin, Calendar, GraduationCap, Mail } from 'lucide-react';
 
 const About = () => {
@@ -63,7 +64,7 @@ const About = () => {
           {/* Bio & Description */}
           <div className={`transition-all duration-1000 ${inView ? 'animate-fade-in-up animate-delay-300' : 'opacity-0'}`}>
             <div className="space-y-6">
-              <h3 className="text-2xl font-semibold text-white">My Journey</h3>
+              <h3 className="text-2xl font-semibold text-white">My Insights</h3>
               <div className="space-y-4 text-white/70 leading-relaxed">
                 <p>
                   I'm a motivated software engineer with a passion for building world-class applications 
@@ -71,8 +72,7 @@ const About = () => {
                   learning new technologies.
                 </p>
                 <p>
-                  My expertise spans full-stack development, with experience in modern frameworks like 
-                  React.js, Node.js, and Python. I enjoy contributing to meaningful projects that drive 
+                  My expertise spans full-stack development and Data Engineering, with experience in modern frameworks.I enjoy contributing to meaningful value that drive 
                   business value and create positive impact.
                 </p>
                 <p>
@@ -80,6 +80,16 @@ const About = () => {
                   projects, or sharing knowledge with the developer community.
                 </p>
               </div>
+          
+              <a
+                href="https://drive.google.com/file/d/1Xtpf6ORMuJGda3Iuwkb9zW2du6aZXYsA/view?usp=sharing"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-6 py-3 bg-black/40 backdrop-blur-sm border border-white/20 text-white font-semibold rounded-lg hover:border-white hover:bg-white hover:text-black transition-all duration-300 group"
+              >
+                View Resume
+                <ExternalLink className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
+              </a>
             </div>
           </div>
         </div>

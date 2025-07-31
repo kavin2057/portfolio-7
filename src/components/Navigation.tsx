@@ -44,7 +44,7 @@ const Navigation = () => {
     <>
       {/* Desktop Navigation */}
       <nav className="fixed top-6 left-1/2 transform -translate-x-1/2 z-50 hidden md:block">
-        <div className="bg-card/80 backdrop-blur-md border border-border rounded-full px-6 py-3 glow">
+        <div className="bg-black/80 backdrop-blur-md border border-border rounded-full px-6 py-3 glow">
           <ul className="flex items-center gap-6">
             {navItems.map((item) => (
               <li key={item.id}>
@@ -68,7 +68,7 @@ const Navigation = () => {
       {/* Mobile Navigation Button */}
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="fixed top-6 right-6 z-50 md:hidden p-3 bg-card border border-border rounded-full glow"
+        className="fixed bottom-6 right-6 z-50 md:hidden p-3 bg-black border border-border rounded-full glow"
       >
         {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
       </button>
@@ -77,7 +77,7 @@ const Navigation = () => {
       {isOpen && (
         <div className="fixed inset-0 z-40 md:hidden">
           <div className="absolute inset-0 bg-background/80 backdrop-blur-md" onClick={() => setIsOpen(false)} />
-          <div className="absolute top-20 right-6 bg-card border border-border rounded-2xl p-6 min-w-[200px] glow">
+          <div className="absolute top-20 right-6 bg-black border border-border rounded-2xl p-6 min-w-[200px] glow">
             <ul className="space-y-4">
               {navItems.map((item) => (
                 <li key={item.id}>
@@ -99,35 +99,7 @@ const Navigation = () => {
         </div>
       )}
 
-      {/* Progress Indicator */}
-      <div className="fixed bottom-6 right-6 z-50 hidden md:block">
-        <div className="bg-card/80 backdrop-blur-md border border-border rounded-full p-2 glow">
-          <div className="w-12 h-12 relative">
-            <svg className="w-full h-full transform -rotate-90" viewBox="0 0 36 36">
-              <path
-                className="text-secondary"
-                stroke="currentColor"
-                strokeWidth="2"
-                fill="none"
-                d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"
-              />
-              <path
-                className="text-neon-cyan"
-                stroke="currentColor"
-                strokeWidth="2"
-                fill="none"
-                strokeDasharray={`${(navItems.findIndex(item => item.id === activeSection) + 1) / navItems.length * 100}, 100`}
-                d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"
-              />
-            </svg>
-            <div className="absolute inset-0 flex items-center justify-center">
-              <span className="text-xs font-semibold text-neon-cyan">
-                {navItems.findIndex(item => item.id === activeSection) + 1}/{navItems.length}
-              </span>
-            </div>
-          </div>
-        </div>
-      </div>
+
     </>
   );
 };
