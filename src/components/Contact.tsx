@@ -82,7 +82,7 @@ const Contact = () => {
       <div className="max-w-6xl mx-auto" ref={ref}>
         <div className={`text-center mb-16 transition-all duration-1000 ${inView ? 'animate-fade-in-up' : 'opacity-0'}`}>
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            Get In <span className="neon-text">Touch</span>
+            Get In <span className="gradient-text">Touch</span>
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
             Ready to collaborate on your next project? Let's build something amazing together!
@@ -92,8 +92,8 @@ const Contact = () => {
         <div className="grid lg:grid-cols-2 gap-12">
           {/* Contact Information */}
           <div className={`space-y-8 transition-all duration-1000 ${inView ? 'animate-slide-in-left' : 'opacity-0'}`}>
-            <div className="bg-card border border-border rounded-2xl p-8 glow">
-              <h3 className="text-2xl font-semibold mb-6 neon-text">Let's Connect</h3>
+            <div className="bg-background/40 backdrop-blur-sm border border-neon-purple/20 rounded-2xl p-8 hover:border-neon-purple/40 hover:shadow-neon transition-all duration-500">
+              <h3 className="text-2xl font-semibold mb-6 gradient-text">Let's Connect</h3>
               <p className="text-muted-foreground mb-8 leading-relaxed">
                 I'm always open to discussing new opportunities, interesting projects, 
                 or just having a chat about technology and innovation. Feel free to reach out!
@@ -127,8 +127,8 @@ const Contact = () => {
             </div>
 
             {/* Social Links */}
-            <div className={`bg-card border border-border rounded-2xl p-8 glow transition-all duration-1000 ${inView ? 'animate-scale-in animate-delay-300' : 'opacity-0'}`}>
-              <h4 className="text-xl font-semibold mb-4 neon-text">Find Me Online</h4>
+            <div className={`bg-background/40 backdrop-blur-sm border border-neon-green/20 rounded-2xl p-8 hover:border-neon-green/40 hover:shadow-neon transition-all duration-1000 ${inView ? 'animate-scale-in animate-delay-300' : 'opacity-0'}`}>
+              <h4 className="text-xl font-semibold mb-4 gradient-text">Find Me Online</h4>
               <div className="flex gap-4">
                 <a
                   href="https://github.com/kavin"
@@ -152,8 +152,8 @@ const Contact = () => {
 
           {/* Contact Form */}
           <div className={`transition-all duration-1000 ${inView ? 'animate-fade-in-up animate-delay-200' : 'opacity-0'}`}>
-            <div className="bg-card border border-border rounded-2xl p-8 glow">
-              <h3 className="text-2xl font-semibold mb-6 neon-text">Send Message</h3>
+            <div className="bg-background/40 backdrop-blur-sm border border-neon-cyan/20 rounded-2xl p-8 hover:border-neon-cyan/40 hover:shadow-neon transition-all duration-500">
+              <h3 className="text-2xl font-semibold mb-6 gradient-text">Send Message</h3>
               
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid md:grid-cols-2 gap-4">

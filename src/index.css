@@ -7,7 +7,7 @@
 @layer base {
   :root {
     /* Dark Portfolio Color Scheme */
-    --background: 220 27% 8%;
+    --background: 0 0% 0%;
     --foreground: 210 40% 95%;
 
     --card: 220 20% 12%;
@@ -48,7 +48,7 @@
     --gradient-bg: linear-gradient(135deg, hsl(220 27% 8%), hsl(220 20% 12%));
 
     /* Shadows */
-    --shadow-neon: 0 0 20px hsl(180 100% 50% / 0.3);
+    --shadow-neon: 0 0 20px hsl(180 100% 50% / 0.3), 0 0 40px hsl(180 100% 50% / 0.1);
     --shadow-glow: 0 0 40px hsl(280 100% 70% / 0.2);
 
     --radius: 0.75rem;
@@ -108,10 +108,10 @@
 
   /* Moving Dots Background */
   .dots-background {
-    background-image: radial-gradient(circle, #333 1px, transparent 1px);
-    background-size: 30px 30px;
-    animation: dots-move 20s linear infinite;
-    opacity: 0.4;
+    background-image: radial-gradient(circle, #222 1px, transparent 1px);
+    background-size: 40px 40px;
+    animation: dots-move 30s linear infinite;
+    opacity: 0.3;
   }
 
   /* Gradient Backgrounds */
@@ -136,6 +136,11 @@
   /* Glow Effect */
   .glow {
     box-shadow: var(--shadow-glow);
+  }
+
+  /* Neon Shadow Effect */
+  .shadow-neon {
+    box-shadow: var(--shadow-neon);
   }
 
 }

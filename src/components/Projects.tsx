@@ -69,7 +69,7 @@ const Projects = () => {
       <div className="max-w-6xl mx-auto" ref={ref}>
         <div className={`text-center mb-16 transition-all duration-1000 ${inView ? 'animate-fade-in-up' : 'opacity-0'}`}>
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            Featured <span className="neon-text">Projects</span>
+            Featured <span className="gradient-text">Projects</span>
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
             A showcase of my technical expertise and problem-solving abilities
@@ -80,7 +80,7 @@ const Projects = () => {
           {projects.map((project, index) => (
             <div
               key={project.title}
-              className={`group bg-card border border-border rounded-2xl p-6 hover:scale-105 hover:border-neon-cyan/50 transition-all duration-500 glow cursor-pointer ${
+              className={`group bg-background/40 backdrop-blur-sm border border-neon-cyan/20 rounded-2xl p-6 hover:scale-105 hover:border-neon-cyan/60 hover:shadow-neon transition-all duration-500 cursor-pointer ${
                 inView ? 'animate-scale-in' : 'opacity-0'
               }`}
               style={{ animationDelay: `${index * 150}ms` }}
@@ -139,26 +139,6 @@ const Projects = () => {
           ))}
         </div>
 
-        {/* Additional Info */}
-        <div className={`mt-16 text-center transition-all duration-1000 ${inView ? 'animate-fade-in-up animate-delay-500' : 'opacity-0'}`}>
-          <div className="bg-card border border-border rounded-2xl p-8 glow">
-            <h3 className="text-2xl font-semibold mb-4 neon-text">Project Highlights</h3>
-            <div className="grid md:grid-cols-3 gap-6">
-              <div className="space-y-2">
-                <div className="text-3xl font-bold text-neon-cyan">6+</div>
-                <div className="text-sm text-muted-foreground">Projects Completed</div>
-              </div>
-              <div className="space-y-2">
-                <div className="text-3xl font-bold text-neon-purple">15+</div>
-                <div className="text-sm text-muted-foreground">Technologies Used</div>
-              </div>
-              <div className="space-y-2">
-                <div className="text-3xl font-bold text-neon-green">3+</div>
-                <div className="text-sm text-muted-foreground">Years Experience</div>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
   );

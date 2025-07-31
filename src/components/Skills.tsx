@@ -15,12 +15,10 @@ const Skills = () => {
         'Python', 'JavaScript', 'TypeScript', 'HTML', 'CSS', 'SQL', 'C#',
         'REST APIs', 'API Integration', 'ETL Pipelines', 'Data Modeling',
         'Machine Learning', 'GenAI', 'LLMs', 'CNN', 'NLP', 'TensorFlow', 'PyTorch', 'AI Modeling',
-        'Node.js', 'Express', 'React.js', 'React Native', 'Next.js',
+        'Node.js', 'Express', 'React.js', 'React Native',
         'TailwindCSS', 'Bootstrap', 'Apache Spark', 'Kafka', 'Airflow',
         'MySQL', 'Sequelize', 'MongoDB', 'PostgreSQL',
-        'AWS (S3, EC2, Lambda)', 'Azure', 'Docker', 'Kubernetes',
-        'Android Studio', 'Git', 'Jupyter Notebook', 'Postman',
-        'Linux', 'VS Code', 'Jenkins', 'Confluence', 'Jira'
+        'AWS (S3, EC2, Lambda)', 'Docker'
       ]
     }
   ];
