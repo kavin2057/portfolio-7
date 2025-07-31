@@ -36,7 +36,7 @@ const Hero = () => {
         <div className={`transition-all duration-1000 ${isVisible ? 'animate-fade-in-up animate-delay-300' : 'opacity-0'}`}>
           <button
             onClick={scrollToAbout}
-            className="group flex items-center gap-2 mx-auto px-6 py-3 bg-gradient-primary text-black font-semibold rounded-lg hover:scale-105 transition-all duration-300 glow"
+            className="group flex items-center gap-2 mx-auto px-6 py-3 bg-white text-black font-semibold rounded-lg hover:bg-white/90 hover:scale-105 transition-all duration-300 shadow-neon"
           >
             Explore My Work
             <ChevronDown className="w-4 h-4 group-hover:translate-y-1 transition-transform duration-300" />
