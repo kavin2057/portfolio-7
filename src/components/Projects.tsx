@@ -68,8 +68,8 @@ const Projects = () => {
     <section id="projects" className="py-20 px-6">
       <div className="max-w-6xl mx-auto" ref={ref}>
         <div className={`text-center mb-16 transition-all duration-1000 ${inView ? 'animate-fade-in-up' : 'opacity-0'}`}>
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            Featured <span className="gradient-text">Projects</span>
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">
+            Featured <span className="text-white">Projects</span>
           </h2>
           <p className="text-white/70 text-lg max-w-2xl mx-auto">
             A showcase of my technical expertise and problem-solving abilities
@@ -80,38 +80,38 @@ const Projects = () => {
           {projects.map((project, index) => (
             <div
               key={project.title}
-              className={`group bg-background/40 backdrop-blur-sm border border-neon-cyan/20 rounded-2xl p-6 hover:scale-105 hover:border-neon-cyan/60 hover:shadow-neon transition-all duration-500 cursor-pointer ${
+              className={`group bg-black/40 backdrop-blur-sm border border-white/20 rounded-2xl p-6 hover:scale-105 hover:border-white hover:bg-white/5 transition-all duration-500 cursor-pointer ${
                 inView ? 'animate-scale-in' : 'opacity-0'
               }`}
               style={{ animationDelay: `${index * 150}ms` }}
             >
               {/* Header */}
               <div className="flex items-start justify-between mb-4">
-                <div className={`p-3 rounded-xl bg-gradient-to-r ${project.gradient}`}>
-                  <project.icon className="w-6 h-6 text-background" />
+                <div className="p-3 rounded-xl bg-white">
+                  <project.icon className="w-6 h-6 text-black" />
                 </div>
-                <span className="text-xs text-muted-foreground font-code px-2 py-1 bg-secondary rounded">
+                <span className="text-xs text-white/70 font-code px-2 py-1 bg-black/40 border border-white/20 rounded">
                   {project.year}
                 </span>
               </div>
 
               {/* Title */}
-              <h3 className="text-xl font-semibold mb-3 group-hover:text-neon-cyan transition-colors duration-300">
+              <h3 className="text-xl font-semibold mb-3 text-white group-hover:text-white transition-colors duration-300">
                 {project.title}
               </h3>
 
               {/* Description */}
-              <p className="text-muted-foreground text-sm mb-4 leading-relaxed">
+              <p className="text-white/70 text-sm mb-4 leading-relaxed">
                 {project.description}
               </p>
 
               {/* Features */}
               <div className="mb-4">
-                <h4 className="text-sm font-semibold mb-2 text-neon-green">Key Features:</h4>
-                <ul className="text-xs text-muted-foreground space-y-1">
+                <h4 className="text-sm font-semibold mb-2 text-white">Key Features:</h4>
+                <ul className="text-xs text-white/70 space-y-1">
                   {project.features.map((feature, idx) => (
                     <li key={idx} className="flex items-center gap-2">
-                      <div className="w-1 h-1 bg-neon-cyan rounded-full"></div>
+                      <div className="w-1 h-1 bg-white rounded-full"></div>
                       {feature}
                     </li>
                   ))}
@@ -120,12 +120,12 @@ const Projects = () => {
 
               {/* Tech Stack */}
               <div className="space-y-3">
-                <h4 className="text-sm font-semibold text-neon-purple">Technologies:</h4>
+                <h4 className="text-sm font-semibold text-white">Technologies:</h4>
                 <div className="flex flex-wrap gap-2">
                   {project.tech.map((tech) => (
                     <span
                       key={tech}
-                      className="px-2 py-1 bg-secondary text-secondary-foreground rounded text-xs font-code border border-border group-hover:border-neon-cyan/30 transition-colors duration-300"
+                      className="px-2 py-1 bg-black/40 backdrop-blur-sm border border-white/20 text-white rounded text-xs font-code group-hover:border-white group-hover:bg-white group-hover:text-black transition-all duration-300"
                     >
                       {tech}
                     </span>
@@ -134,7 +134,7 @@ const Projects = () => {
               </div>
 
               {/* Hover Effect Overlay */}
-              <div className="absolute inset-0 bg-gradient-to-r from-neon-cyan/5 to-neon-purple/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
+              <div className="absolute inset-0 bg-white/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
             </div>
           ))}
         </div>

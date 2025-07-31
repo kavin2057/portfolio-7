@@ -17,7 +17,7 @@ const Hero = () => {
       <div className="text-center z-10 max-w-4xl mx-auto px-6">
         <div className={`transition-all duration-1000 ${isVisible ? 'animate-fade-in-up' : 'opacity-0'}`}>
           <h1 className="text-5xl md:text-7xl font-bold mb-6">
-            <span className="gradient-text">Kavin</span>
+            <span className="text-white">Kavin</span>
             <br />
             <span className="text-white">Shanmugavel</span>
           </h1>
@@ -36,7 +36,7 @@ const Hero = () => {
         <div className={`transition-all duration-1000 ${isVisible ? 'animate-fade-in-up animate-delay-300' : 'opacity-0'}`}>
           <button
             onClick={scrollToAbout}
-            className="group flex items-center gap-2 mx-auto px-6 py-3 bg-gradient-primary text-black font-semibold rounded-lg hover:scale-105 transition-all duration-300 glow"
+            className="group flex items-center gap-2 mx-auto px-6 py-3 bg-black/40 backdrop-blur-sm border border-white/20 text-white font-semibold rounded-lg hover:border-white hover:bg-white hover:text-black transition-all duration-300"
           >
             Explore My Work
             <ChevronDown className="w-4 h-4 group-hover:translate-y-1 transition-transform duration-300" />

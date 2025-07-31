@@ -81,8 +81,8 @@ const Contact = () => {
     <section id="contact" className="py-20 px-6">
       <div className="max-w-6xl mx-auto" ref={ref}>
         <div className={`text-center mb-16 transition-all duration-1000 ${inView ? 'animate-fade-in-up' : 'opacity-0'}`}>
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            Get In <span className="gradient-text">Touch</span>
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">
+            Get In <span className="text-white">Touch</span>
           </h2>
           <p className="text-white/70 text-lg max-w-2xl mx-auto">
             Ready to collaborate on your next project? Let's build something amazing together!
@@ -92,9 +92,9 @@ const Contact = () => {
         <div className="grid lg:grid-cols-2 gap-12">
           {/* Contact Information */}
           <div className={`space-y-8 transition-all duration-1000 ${inView ? 'animate-slide-in-left' : 'opacity-0'}`}>
-            <div className="bg-background/40 backdrop-blur-sm border border-neon-purple/20 rounded-2xl p-8 hover:border-neon-purple/40 hover:shadow-neon transition-all duration-500">
-              <h3 className="text-2xl font-semibold mb-6 gradient-text">Let's Connect</h3>
-              <p className="text-muted-foreground mb-8 leading-relaxed">
+            <div className="bg-black/40 backdrop-blur-sm border border-white/20 rounded-2xl p-8 hover:border-white/40 transition-all duration-500">
+              <h3 className="text-2xl font-semibold mb-6 text-white">Let's Connect</h3>
+              <p className="text-white/70 mb-8 leading-relaxed">
                 I'm always open to discussing new opportunities, interesting projects, 
                 or just having a chat about technology and innovation. Feel free to reach out!
               </p>
@@ -104,22 +104,22 @@ const Contact = () => {
                   <a
                     key={info.label}
                     href={info.href}
-                    className={`flex items-center gap-4 p-4 bg-secondary rounded-xl hover:bg-accent transition-all duration-300 hover:scale-105 group ${
+                    className={`flex items-center gap-4 p-4 bg-black/40 backdrop-blur-sm border border-white/20 rounded-xl hover:border-white hover:bg-white hover:text-black transition-all duration-300 hover:scale-105 group ${
                       inView ? 'animate-scale-in' : 'opacity-0'
                     }`}
                     style={{ animationDelay: `${index * 100}ms` }}
                     target={info.href.startsWith('http') ? '_blank' : undefined}
                     rel={info.href.startsWith('http') ? 'noopener noreferrer' : undefined}
                   >
-                    <div className={`p-3 rounded-lg bg-gradient-primary`}>
-                      <info.icon className="w-5 h-5 text-background" />
+                    <div className="p-3 rounded-lg bg-white">
+                      <info.icon className="w-5 h-5 text-black" />
                     </div>
                     <div className="flex-1">
-                      <div className="font-medium">{info.label}</div>
-                      <div className={`text-sm ${info.color} group-hover:underline`}>{info.value}</div>
+                      <div className="font-medium text-white group-hover:text-black">{info.label}</div>
+                      <div className="text-sm text-white/70 group-hover:text-black/70 group-hover:underline">{info.value}</div>
                     </div>
                     {info.href.startsWith('http') && (
-                      <ExternalLink className="w-4 h-4 text-muted-foreground group-hover:text-neon-cyan transition-colors duration-300" />
+                      <ExternalLink className="w-4 h-4 text-white/70 group-hover:text-black/70 transition-colors duration-300" />
                     )}
                   </a>
                 ))}
@@ -127,14 +127,14 @@ const Contact = () => {
             </div>
 
             {/* Social Links */}
-            <div className={`bg-background/40 backdrop-blur-sm border border-neon-green/20 rounded-2xl p-8 hover:border-neon-green/40 hover:shadow-neon transition-all duration-1000 ${inView ? 'animate-scale-in animate-delay-300' : 'opacity-0'}`}>
-              <h4 className="text-xl font-semibold mb-4 gradient-text">Find Me Online</h4>
+            <div className={`bg-black/40 backdrop-blur-sm border border-white/20 rounded-2xl p-8 hover:border-white/40 transition-all duration-1000 ${inView ? 'animate-scale-in animate-delay-300' : 'opacity-0'}`}>
+              <h4 className="text-xl font-semibold mb-4 text-white">Find Me Online</h4>
               <div className="flex gap-4">
                 <a
                   href="https://github.com/kavin"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-3 bg-secondary rounded-lg hover:bg-gradient-primary hover:text-background transition-all duration-300 hover:scale-110 group"
+                  className="p-3 bg-black/40 backdrop-blur-sm border border-white/20 rounded-lg hover:bg-white hover:text-black transition-all duration-300 hover:scale-110 group"
                 >
                   <Github className="w-6 h-6" />
                 </a>
@@ -142,7 +142,7 @@ const Contact = () => {
                   href="https://linkedin.com/in/kavin"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-3 bg-secondary rounded-lg hover:bg-gradient-primary hover:text-background transition-all duration-300 hover:scale-110 group"
+                  className="p-3 bg-black/40 backdrop-blur-sm border border-white/20 rounded-lg hover:bg-white hover:text-black transition-all duration-300 hover:scale-110 group"
                 >
                   <Linkedin className="w-6 h-6" />
                 </a>
@@ -152,13 +152,13 @@ const Contact = () => {
 
           {/* Contact Form */}
           <div className={`transition-all duration-1000 ${inView ? 'animate-fade-in-up animate-delay-200' : 'opacity-0'}`}>
-            <div className="bg-background/40 backdrop-blur-sm border border-neon-cyan/20 rounded-2xl p-8 hover:border-neon-cyan/40 hover:shadow-neon transition-all duration-500">
-              <h3 className="text-2xl font-semibold mb-6 gradient-text">Send Message</h3>
+            <div className="bg-black/40 backdrop-blur-sm border border-white/20 rounded-2xl p-8 hover:border-white/40 transition-all duration-500">
+              <h3 className="text-2xl font-semibold mb-6 text-white">Send Message</h3>
               
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid md:grid-cols-2 gap-4">
                   <div className="space-y-2">
-                    <label htmlFor="name" className="text-sm font-medium">Name</label>
+                    <label htmlFor="name" className="text-sm font-medium text-white">Name</label>
                     <Input
                       id="name"
                       name="name"
@@ -170,7 +170,7 @@ const Contact = () => {
                     />
                   </div>
                   <div className="space-y-2">
-                    <label htmlFor="email" className="text-sm font-medium">Email</label>
+                    <label htmlFor="email" className="text-sm font-medium text-white">Email</label>
                     <Input
                       id="email"
                       name="email"
@@ -185,7 +185,7 @@ const Contact = () => {
                 </div>
 
                 <div className="space-y-2">
-                  <label htmlFor="subject" className="text-sm font-medium">Subject</label>
+                  <label htmlFor="subject" className="text-sm font-medium text-white">Subject</label>
                   <Input
                     id="subject"
                     name="subject"
@@ -198,7 +198,7 @@ const Contact = () => {
                 </div>
 
                 <div className="space-y-2">
-                  <label htmlFor="message" className="text-sm font-medium">Message</label>
+                  <label htmlFor="message" className="text-sm font-medium text-white">Message</label>
                   <Textarea
                     id="message"
                     name="message"
@@ -213,17 +213,17 @@ const Contact = () => {
 
                 <Button
                   type="submit"
-                  className="w-full bg-gradient-primary text-background hover:scale-105 transition-all duration-300 glow font-semibold"
+                  className="w-full bg-white text-black hover:scale-105 transition-all duration-300 font-semibold"
                 >
                   <Send className="w-4 h-4 mr-2" />
                   Send Message
                 </Button>
               </form>
 
-              <div className="mt-6 p-4 bg-secondary rounded-lg">
-                <p className="text-sm text-muted-foreground text-center">
+              <div className="mt-6 p-4 bg-black/40 backdrop-blur-sm border border-white/20 rounded-lg">
+                <p className="text-sm text-white/70 text-center">
                   💡 <strong>Quick tip:</strong> This form opens your email client with the message pre-filled.
-                  You can also email me directly at <span className="text-neon-cyan font-code">kavin2057@gmail.com</span>
+                  You can also email me directly at <span className="text-white font-code">kavin2057@gmail.com</span>
                 </p>
               </div>
             </div>

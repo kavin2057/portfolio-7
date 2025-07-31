@@ -30,8 +30,8 @@ const Skills = () => {
       
       <div className="max-w-6xl mx-auto relative z-10" ref={ref}>
         <div className={`text-center mb-16 transition-all duration-1000 ${inView ? 'animate-fade-in-up' : 'opacity-0'}`}>
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            My <span className="gradient-text">Skills</span>
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">
+            My <span className="text-white">Skills</span>
           </h2>
           <p className="text-white/70 text-lg max-w-2xl mx-auto">
             Technologies and tools I use to bring ideas to life
@@ -48,17 +48,17 @@ const Skills = () => {
               style={{ animationDelay: `${categoryIndex * 100}ms` }}
             >
               <div className="flex items-center justify-center gap-3 mb-8">
-                <div className="p-3 bg-gradient-primary rounded-xl">
+                <div className="p-3 bg-white rounded-xl">
                   <category.icon className="w-8 h-8 text-black" />
                 </div>
-                <h3 className="text-2xl font-bold gradient-text">{category.title}</h3>
+                <h3 className="text-2xl font-bold text-white">{category.title}</h3>
               </div>
 
               <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
                 {category.skills.map((skill, skillIndex) => (
                   <div 
                     key={skill}
-                     className={`px-4 py-3 bg-black/40 backdrop-blur-sm rounded-lg border border-white/20 hover:border-white/40 hover:shadow-neon transition-all duration-300 text-center ${
+                     className={`px-4 py-3 bg-black/40 backdrop-blur-sm rounded-lg border border-white/20 hover:border-white hover:bg-white hover:text-black transition-all duration-300 text-center ${
                        inView ? 'animate-scale-in' : 'opacity-0'
                      }`}
                      style={{ animationDelay: `${200 + (skillIndex * 50)}ms` }}

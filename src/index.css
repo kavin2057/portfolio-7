@@ -106,7 +106,7 @@
     font-weight: 700;
   }
 
-  /* Connecting Line */
+  /* Wavy Connecting Line */
   .connecting-line {
     position: relative;
   }
@@ -117,18 +117,27 @@
     left: 50%;
     top: 0;
     bottom: 0;
-    width: 2px;
-    background: linear-gradient(180deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    width: 3px;
+    background: linear-gradient(180deg, transparent, rgba(255, 255, 255, 0.8), transparent);
     transform: translateX(-50%);
     z-index: 1;
+    clip-path: polygon(
+      0% 0%, 100% 5%, 100% 10%, 0% 15%,
+      0% 20%, 100% 25%, 100% 30%, 0% 35%,
+      0% 40%, 100% 45%, 100% 50%, 0% 55%,
+      0% 60%, 100% 65%, 100% 70%, 0% 75%,
+      0% 80%, 100% 85%, 100% 90%, 0% 95%,
+      0% 100%
+    );
+    animation: wave-flow 6s linear infinite;
   }
 
-  /* Moving Dots Background */
+  /* Minimal Moving Dots Background - Astronaut in Space */
   .dots-background {
-    background-image: radial-gradient(circle, rgba(255, 255, 255, 0.8) 1px, transparent 1px);
-    background-size: 50px 50px;
-    animation: dots-move 25s linear infinite;
-    opacity: 0.6;
+    background-image: radial-gradient(circle, rgba(255, 255, 255, 0.4) 0.5px, transparent 1px);
+    background-size: 120px 120px;
+    animation: slow-drift 60s linear infinite;
+    opacity: 0.3;
   }
 
   /* Gradient Backgrounds */
@@ -164,12 +173,18 @@
 
 @layer utilities {
   /* Custom Animations */
-  @keyframes dots-move {
+  @keyframes slow-drift {
     0% { transform: translate(0, 0); }
-    25% { transform: translate(-10px, -10px); }
-    50% { transform: translate(10px, -5px); }
-    75% { transform: translate(-5px, 10px); }
+    25% { transform: translate(-5px, -3px); }
+    50% { transform: translate(3px, -2px); }
+    75% { transform: translate(-2px, 4px); }
     100% { transform: translate(0, 0); }
+  }
+
+  @keyframes wave-flow {
+    0% { clip-path: polygon(0% 0%, 100% 5%, 100% 10%, 0% 15%, 0% 20%, 100% 25%, 100% 30%, 0% 35%, 0% 40%, 100% 45%, 100% 50%, 0% 55%, 0% 60%, 100% 65%, 100% 70%, 0% 75%, 0% 80%, 100% 85%, 100% 90%, 0% 95%, 0% 100%); }
+    50% { clip-path: polygon(100% 0%, 0% 5%, 0% 10%, 100% 15%, 100% 20%, 0% 25%, 0% 30%, 100% 35%, 100% 40%, 0% 45%, 0% 50%, 100% 55%, 100% 60%, 0% 65%, 0% 70%, 100% 75%, 100% 80%, 0% 85%, 0% 90%, 100% 95%, 100% 100%); }
+    100% { clip-path: polygon(0% 0%, 100% 5%, 100% 10%, 0% 15%, 0% 20%, 100% 25%, 100% 30%, 0% 35%, 0% 40%, 100% 45%, 100% 50%, 0% 55%, 0% 60%, 100% 65%, 100% 70%, 0% 75%, 0% 80%, 100% 85%, 100% 90%, 0% 95%, 0% 100%); }
   }
 
   @keyframes floating {
