@@ -42,10 +42,10 @@
     --neon-green: 158 64% 52%;
     --neon-yellow: 60 100% 50%;
 
-    /* Simple Backgrounds */
-    --gradient-primary: #ffffff;
-    --gradient-secondary: #f0f0f0;
-    --gradient-bg: #000000;
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, #ffffff, #f0f0f0);
+    --gradient-secondary: linear-gradient(135deg, #f0f0f0, #ffffff);
+    --gradient-bg: linear-gradient(135deg, #000000, #111111);
 
     /* Shadows */
     --shadow-neon: 0 0 20px rgba(255, 255, 255, 0.3), 0 0 40px rgba(255, 255, 255, 0.1);
@@ -97,13 +97,16 @@
 }
 
 @layer components {
-  /* Clear Text without gradients */
+  /* Gradient Text Effect */
   .gradient-text {
-    color: #ffffff;
+    background: linear-gradient(135deg, #ffffff, #f0f0f0, #e0e0e0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
     font-weight: 700;
   }
 
-  /* Wavy Connecting Line */
+  /* Connecting Line */
   .connecting-line {
     position: relative;
   }
@@ -114,27 +117,18 @@
     left: 50%;
     top: 0;
     bottom: 0;
-    width: 3px;
-    background: linear-gradient(180deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+    width: 2px;
+    background: linear-gradient(180deg, transparent, rgba(255, 255, 255, 0.3), transparent);
     transform: translateX(-50%);
     z-index: 1;
-    clip-path: polygon(
-      0% 0%, 100% 0%,
-      95% 10%, 5% 20%,
-      100% 30%, 0% 40%,
-      5% 50%, 95% 60%,
-      0% 70%, 100% 80%,
-      95% 90%, 5% 100%,
-      0% 100%, 100% 100%
-    );
   }
 
-  /* Minimal Space Dots Background */
+  /* Moving Dots Background */
   .dots-background {
-    background-image: radial-gradient(circle, rgba(255, 255, 255, 0.6) 0.5px, transparent 0.5px);
-    background-size: 80px 80px;
-    animation: space-drift 40s linear infinite;
-    opacity: 0.4;
+    background-image: radial-gradient(circle, rgba(255, 255, 255, 0.8) 1px, transparent 1px);
+    background-size: 50px 50px;
+    animation: dots-move 25s linear infinite;
+    opacity: 0.6;
   }
 
   /* Gradient Backgrounds */
@@ -170,12 +164,12 @@
 
 @layer utilities {
   /* Custom Animations */
-  @keyframes space-drift {
-    0% { transform: translate(0, 0) rotate(0deg); }
-    25% { transform: translate(-20px, -30px) rotate(90deg); }
-    50% { transform: translate(15px, -10px) rotate(180deg); }
-    75% { transform: translate(-10px, 20px) rotate(270deg); }
-    100% { transform: translate(0, 0) rotate(360deg); }
+  @keyframes dots-move {
+    0% { transform: translate(0, 0); }
+    25% { transform: translate(-10px, -10px); }
+    50% { transform: translate(10px, -5px); }
+    75% { transform: translate(-5px, 10px); }
+    100% { transform: translate(0, 0); }
   }
 
   @keyframes floating {

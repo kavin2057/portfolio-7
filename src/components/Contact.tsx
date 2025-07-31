@@ -92,9 +92,9 @@ const Contact = () => {
         <div className="grid lg:grid-cols-2 gap-12">
           {/* Contact Information */}
           <div className={`space-y-8 transition-all duration-1000 ${inView ? 'animate-slide-in-left' : 'opacity-0'}`}>
-            <div className="bg-black/40 backdrop-blur-sm border border-white/20 rounded-2xl p-8 hover:border-white/40 hover:shadow-neon transition-all duration-500">
-              <h3 className="text-2xl font-semibold mb-6 text-white">Let's Connect</h3>
-              <p className="text-white/70 mb-8 leading-relaxed">
+            <div className="bg-background/40 backdrop-blur-sm border border-neon-purple/20 rounded-2xl p-8 hover:border-neon-purple/40 hover:shadow-neon transition-all duration-500">
+              <h3 className="text-2xl font-semibold mb-6 gradient-text">Let's Connect</h3>
+              <p className="text-muted-foreground mb-8 leading-relaxed">
                 I'm always open to discussing new opportunities, interesting projects, 
                 or just having a chat about technology and innovation. Feel free to reach out!
               </p>
@@ -104,22 +104,22 @@ const Contact = () => {
                   <a
                     key={info.label}
                     href={info.href}
-                    className={`flex items-center gap-4 p-4 bg-black/40 rounded-xl hover:bg-black/60 hover:border-white/40 border border-white/20 transition-all duration-300 hover:scale-105 group ${
+                    className={`flex items-center gap-4 p-4 bg-secondary rounded-xl hover:bg-accent transition-all duration-300 hover:scale-105 group ${
                       inView ? 'animate-scale-in' : 'opacity-0'
                     }`}
                     style={{ animationDelay: `${index * 100}ms` }}
                     target={info.href.startsWith('http') ? '_blank' : undefined}
                     rel={info.href.startsWith('http') ? 'noopener noreferrer' : undefined}
                   >
-                    <div className={`p-3 rounded-lg bg-white`}>
-                      <info.icon className="w-5 h-5 text-black" />
+                    <div className={`p-3 rounded-lg bg-gradient-primary`}>
+                      <info.icon className="w-5 h-5 text-background" />
                     </div>
                     <div className="flex-1">
-                      <div className="font-medium text-white">{info.label}</div>
-                      <div className={`text-sm text-white/70 group-hover:underline`}>{info.value}</div>
+                      <div className="font-medium">{info.label}</div>
+                      <div className={`text-sm ${info.color} group-hover:underline`}>{info.value}</div>
                     </div>
                     {info.href.startsWith('http') && (
-                      <ExternalLink className="w-4 h-4 text-white/70 group-hover:text-white transition-colors duration-300" />
+                      <ExternalLink className="w-4 h-4 text-muted-foreground group-hover:text-neon-cyan transition-colors duration-300" />
                     )}
                   </a>
                 ))}
