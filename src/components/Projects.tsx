@@ -71,7 +71,7 @@ const Projects = () => {
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
             Featured <span className="gradient-text">Projects</span>
           </h2>
-          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+          <p className="text-white/70 text-lg max-w-2xl mx-auto">
             A showcase of my technical expertise and problem-solving abilities
           </p>
         </div>

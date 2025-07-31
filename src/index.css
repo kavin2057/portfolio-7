@@ -43,13 +43,13 @@
     --neon-yellow: 60 100% 50%;
 
     /* Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(180 100% 50%), hsl(280 100% 70%));
-    --gradient-secondary: linear-gradient(135deg, hsl(158 64% 52%), hsl(320 100% 70%));
-    --gradient-bg: linear-gradient(135deg, hsl(220 27% 8%), hsl(220 20% 12%));
+    --gradient-primary: linear-gradient(135deg, #ffffff, #f0f0f0);
+    --gradient-secondary: linear-gradient(135deg, #f0f0f0, #ffffff);
+    --gradient-bg: linear-gradient(135deg, #000000, #111111);
 
     /* Shadows */
-    --shadow-neon: 0 0 20px hsl(180 100% 50% / 0.3), 0 0 40px hsl(180 100% 50% / 0.1);
-    --shadow-glow: 0 0 40px hsl(280 100% 70% / 0.2);
+    --shadow-neon: 0 0 20px rgba(255, 255, 255, 0.3), 0 0 40px rgba(255, 255, 255, 0.1);
+    --shadow-glow: 0 0 40px rgba(255, 255, 255, 0.2);
 
     --radius: 0.75rem;
   }
@@ -99,19 +99,36 @@
 @layer components {
   /* Gradient Text Effect */
   .gradient-text {
-    background: var(--gradient-primary);
+    background: linear-gradient(135deg, #ffffff, #f0f0f0, #e0e0e0);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
     font-weight: 700;
   }
 
+  /* Connecting Line */
+  .connecting-line {
+    position: relative;
+  }
+  
+  .connecting-line::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(180deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transform: translateX(-50%);
+    z-index: 1;
+  }
+
   /* Moving Dots Background */
   .dots-background {
-    background-image: radial-gradient(circle, #222 1px, transparent 1px);
-    background-size: 40px 40px;
-    animation: dots-move 30s linear infinite;
-    opacity: 0.3;
+    background-image: radial-gradient(circle, rgba(255, 255, 255, 0.8) 1px, transparent 1px);
+    background-size: 50px 50px;
+    animation: dots-move 25s linear infinite;
+    opacity: 0.6;
   }
 
   /* Gradient Backgrounds */

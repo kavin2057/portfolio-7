@@ -8,8 +8,9 @@ import Navigation from '@/components/Navigation';
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-background dots-background">
-      <Navigation />
+    <div className="min-h-screen bg-black dots-background relative">
+      <div className="connecting-line">
+        <Navigation />
       <Hero />
       <About />
       <Skills />
@@ -17,17 +18,18 @@ const Index = () => {
       <Projects />
       <Contact />
       
-      {/* Footer */}
-      <footer className="py-8 px-6 border-t border-border bg-card/50">
-        <div className="max-w-6xl mx-auto text-center">
-          <p className="text-muted-foreground">
-            © 2024 Kavin Shanmugavel. Built with React, TypeScript & Tailwind CSS.
-          </p>
-          <p className="text-sm text-muted-foreground mt-2">
-            Designed with <span className="text-neon-pink">♥</span> for the modern web
-          </p>
-        </div>
-      </footer>
+        {/* Footer */}
+        <footer className="py-8 px-6 border-t border-white/20 bg-black/80 relative z-10">
+          <div className="max-w-6xl mx-auto text-center">
+            <p className="text-white/80">
+              © 2024 Kavin Shanmugavel. Built with React, TypeScript & Tailwind CSS.
+            </p>
+            <p className="text-sm text-white/60 mt-2">
+              Designed with <span className="text-white">♥</span> for the modern web
+            </p>
+          </div>
+        </footer>
+      </div>
     </div>
   );
 };

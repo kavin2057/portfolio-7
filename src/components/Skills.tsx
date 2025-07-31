@@ -33,7 +33,7 @@ const Skills = () => {
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
             My <span className="gradient-text">Skills</span>
           </h2>
-          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+          <p className="text-white/70 text-lg max-w-2xl mx-auto">
             Technologies and tools I use to bring ideas to life
           </p>
         </div>
@@ -42,14 +42,14 @@ const Skills = () => {
           {skillCategories.map((category, categoryIndex) => (
             <div
               key={category.title}
-              className={`bg-card/80 backdrop-blur-sm border border-border rounded-2xl p-8 hover:scale-[1.02] transition-all duration-500 hover:shadow-lg hover:border-primary/30 ${
+              className={`bg-black/40 backdrop-blur-sm border border-white/20 rounded-2xl p-8 hover:scale-[1.02] hover:border-white/40 hover:shadow-neon transition-all duration-500 ${
                 inView ? 'animate-scale-in' : 'opacity-0'
               }`}
               style={{ animationDelay: `${categoryIndex * 100}ms` }}
             >
               <div className="flex items-center justify-center gap-3 mb-8">
                 <div className="p-3 bg-gradient-primary rounded-xl">
-                  <category.icon className="w-8 h-8 text-background" />
+                  <category.icon className="w-8 h-8 text-black" />
                 </div>
                 <h3 className="text-2xl font-bold gradient-text">{category.title}</h3>
               </div>
@@ -58,13 +58,13 @@ const Skills = () => {
                 {category.skills.map((skill, skillIndex) => (
                   <div 
                     key={skill}
-                    className={`px-4 py-3 bg-secondary/50 rounded-lg border border-border/50 hover:border-primary/30 transition-all duration-300 text-center ${
-                      inView ? 'animate-scale-in' : 'opacity-0'
-                    }`}
-                    style={{ animationDelay: `${200 + (skillIndex * 50)}ms` }}
-                  >
-                    <span className="font-medium text-foreground text-sm">{skill}</span>
-                  </div>
+                     className={`px-4 py-3 bg-black/40 backdrop-blur-sm rounded-lg border border-white/20 hover:border-white/40 hover:shadow-neon transition-all duration-300 text-center ${
+                       inView ? 'animate-scale-in' : 'opacity-0'
+                     }`}
+                     style={{ animationDelay: `${200 + (skillIndex * 50)}ms` }}
+                   >
+                     <span className="font-medium text-white text-sm">{skill}</span>
+                   </div>
                 ))}
               </div>
             </div>
